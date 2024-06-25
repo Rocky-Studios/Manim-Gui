@@ -1,0 +1,10 @@
+C:\Users\Gergo K\Desktop\Manim-Gui\bin\Debug\Manim-Gui.exe.config
+C:\Users\Gergo K\Desktop\Manim-Gui\bin\Debug\Manim-Gui.exe
+C:\Users\Gergo K\Desktop\Manim-Gui\bin\Debug\Manim-Gui.pdb
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim-Gui.csproj.AssemblyReference.cache
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim_Gui.ManimGUI.resources
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim_Gui.Properties.Resources.resources
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim-Gui.csproj.GenerateResource.cache
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim-Gui.csproj.CoreCompileInputs.cache
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim-Gui.exe
+C:\Users\Gergo K\Desktop\Manim-Gui\obj\Debug\Manim-Gui.pdb
