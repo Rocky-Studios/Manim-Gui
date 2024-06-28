@@ -5,26 +5,24 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Manim_GUI"
         mc:Ignorable="d"
-        Title="Manim-GUI" Height="450" Width="800">
+        Title="Manim-GUI" Height="600" Width="800">
     <Grid Margin="10">
 
         <Grid.RowDefinitions>
-            <RowDefinition Height="Auto" />
-            <RowDefinition Height="*" />
+            <RowDefinition Height="20*" />
+            <RowDefinition Height="80*" />
         </Grid.RowDefinitions>
 
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="*" />
-            <ColumnDefinition Width="*" />
+            <ColumnDefinition Width="20*" />
+            <ColumnDefinition Width="40*" />
+            <ColumnDefinition Width="20*" />
         </Grid.ColumnDefinitions>
 
-        <Label Grid.Column="1">Names</Label>
+        <Label Grid.Column="1" FontFamily="Cambria Math" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center">Manim GUI</Label>
         <ListBox Grid.Row="1" x:Name="lstNames" />
 
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0">
-            <TextBox x:Name="txtName" />
-            <Button x:Name="btnAdd" Margin="0,5,0,0" Click="ButtonAddName_Click">Add Name</Button>
-        </StackPanel>
+        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
     </Grid>
 </Window>
