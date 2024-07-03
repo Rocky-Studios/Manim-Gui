@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Manim_GUI.Windows;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -46,7 +47,11 @@ namespace Manim_GUI
 
         private void NewProjectButtonClick(object sender, RoutedEventArgs e)
         {
-            
+            var window = new NewProjectWindow();
+
+            window.Owner = this;
+            window.Show();
+            this.Hide();
         }
     }
 }

@@ -31,8 +31,12 @@
             <Button x:Name="OpenProjectButton" Content="Open Project" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="0" Click="OpenProjectButtonClick" FontSize="18"/>
             <Button x:Name="NewProjectButton" Content="New Project" HorizontalAlignment="Center" Margin="0,0,0,0" VerticalAlignment="Center" Grid.Column="1" Click="NewProjectButtonClick" FontSize="18"/>
 
+            
         </Grid>
 
-        <StackPanel Grid.Row="1" Grid.Column="1" Margin="5,0,0,0"/>
+
+        <Label Grid.Column="1" Grid.Row="2" FontFamily="Cambria Math" FontSize="24" HorizontalAlignment="Center" VerticalAlignment="Top">Recent Projects</Label>
+
+        <StackPanel Grid.Row="2" Grid.Column="1" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,36,0,0"/>
     </Grid>
 </Window>
