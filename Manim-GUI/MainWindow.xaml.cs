@@ -25,13 +25,28 @@ namespace Manim_GUI
             InitializeComponent();
         }
 
-        private void ButtonAddName_Click(object sender, RoutedEventArgs e)
+        private void OpenProjectButtonClick(object sender, RoutedEventArgs e)
         {
-            if (!string.IsNullOrWhiteSpace(txtName.Text) && !lstNames.Items.Contains(txtName.Text))
+            // Configure open file dialog box
+            var dialog = new Microsoft.Win32.OpenFileDialog();
+            dialog.FileName = "Project.mgui"; // Default file name
+            dialog.DefaultExt = ".mgui"; // Default file extension
+            dialog.Filter = "Manim GUI Project Files(.mgui)|*.mgui"; // Filter files by extension
+
+            // Show open file dialog box
+            bool? result = dialog.ShowDialog();
+
+            // Process open file dialog box results
+            if (result == true)
             {
-                lstNames.Items.Add(txtName.Text);
-                txtName.Clear();
+                // Open document
+                string filename = dialog.FileName;
             }
+        }
+
+        private void NewProjectButtonClick(object sender, RoutedEventArgs e)
+        {
+            
         }
     }
 }
