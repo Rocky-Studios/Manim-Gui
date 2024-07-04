@@ -59,7 +59,7 @@ namespace Manim_GUI
                     Dispatcher.Invoke(() =>
                     {
                         string messageBoxText = "It looks like you don't have Python 3.11 installed, which is required to run Manim. Please install Python 3.11 and restart your computer.";
-                        string caption = "Manim";
+                        string caption = "Manim GUI";
                         MessageBoxButton button = MessageBoxButton.OK;
                         MessageBoxImage icon = MessageBoxImage.Warning;
                         MessageBoxResult result;
