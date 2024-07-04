@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Manim_GUI
 {
-    class Project
+    public class Project
     {
         public string Name;
         public string Path;

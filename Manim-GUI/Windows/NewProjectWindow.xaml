@@ -36,7 +36,7 @@
             <Button x:Name="ProjectLocationButton" Grid.Column="1" Content="Choose" HorizontalAlignment="Left" Height="auto" Margin="5,45,0,0" VerticalAlignment="Top" Width="auto" Click="ProjectLocationButtonClick" FontSize="24"/>
 
             <Button x:Name="BackButton" Height="Auto" Width="Auto" Grid.Column="0" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Back" FontSize="32" Click="BackButtonClick"/>
-            <Button Height="Auto" Width="Auto" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Create" FontSize="32"/>
+            <Button x:Name="CreateButton" Height="Auto" Width="Auto" Grid.Column="1" VerticalAlignment="Bottom" HorizontalAlignment="Center" Content="Create" FontSize="32" Click="CreateButtonClick"/>
         </Grid>
     </Grid>
 </Window>
