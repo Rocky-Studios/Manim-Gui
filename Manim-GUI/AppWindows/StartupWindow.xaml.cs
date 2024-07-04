@@ -1,13 +1,10 @@
-﻿using Manim_GUI.Windows;
-using System.Diagnostics;
+﻿using System.Diagnostics;
 using System.Threading.Tasks;
 using System.Windows;
+using Microsoft.Win32;
 
-namespace Manim_GUI
+namespace ManimGUI.AppWindows
 {
-    /// <summary>
-    /// Interaction logic for MainWindow.xaml
-    /// </summary>
     public partial class StartupWindow : Window
     {
         public StartupWindow()
@@ -15,7 +12,7 @@ namespace Manim_GUI
             InitializeComponent();
             WindowController.windows.Add(this);
 
-            // Create a Task to run the Python version check logic asynchronously
+            // Create a Task to run the Python version check
             Task<bool> checkPythonTask = Task.Run(() =>
             {
                 using (Process process = new Process())
@@ -24,9 +21,10 @@ namespace Manim_GUI
                     process.StartInfo.Arguments = "--version";
                     process.StartInfo.UseShellExecute = false;
                     process.StartInfo.RedirectStandardOutput = true;
+                    process.StartInfo.CreateNoWindow = true;
                     process.Start();
 
-                    // Asynchronously read the standard output of the spawned process
+                    // Read the standard output of the spawned process
                     string output = process.StandardOutput.ReadToEndAsync().Result;
 
                     bool hasPython = output.Contains("3.11");
@@ -41,7 +39,6 @@ namespace Manim_GUI
                 bool hasPython = task.Result;
                 if (!hasPython)
                 {
-                    // Update UI on the main thread using Dispatcher
                     Dispatcher.Invoke(() =>
                     {
                         string messageBoxText = "It looks like you don't have Python 3.11 installed, which is required to run Manim. Please install Python 3.11 and restart your computer.";
@@ -61,12 +58,13 @@ namespace Manim_GUI
         private void OpenProjectButtonClick(object sender, RoutedEventArgs e)
         {
             // Configure open file dialog box
-            var dialog = new Microsoft.Win32.OpenFileDialog();
-            dialog.FileName = "Project.mgui"; // Default file name
-            dialog.DefaultExt = ".mgui"; // Default file extension
-            dialog.Filter = "Manim GUI Project Files(.mgui)|*.mgui"; // Filter files by extension
+            OpenFileDialog dialog = new()
+            {
+                FileName = "Project.mgui", // Default file name
+                DefaultExt = ".mgui", // Default file extension
+                Filter = "Manim GUI Project Files(.mgui)|*.mgui" // Filter files by extension
+            };
 
-            // Show open file dialog box
             bool? result = dialog.ShowDialog();
 
             // Process open file dialog box results

@@ -1,7 +1,8 @@
 ﻿using System.Windows;
 using System.Windows.Controls;
+using ManimGUI;
 
-namespace Manim_GUI.Windows
+namespace ManimGUI.AppWindows
 {
     /// <summary>
     /// Interaction logic for NewProjectWindow.xaml
@@ -10,7 +11,6 @@ namespace Manim_GUI.Windows
     {
         string projectName = "";
         string projectLocation = "";
-        Project project;
         public NewProjectWindow()
         {
             InitializeComponent();
@@ -34,15 +34,15 @@ namespace Manim_GUI.Windows
                 // Save document
                 projectLocation = dialog.FileName;
                 string[] pathAsArray = projectLocation.Split('\\');
-                (sender as Button).Content = "Choose (" + pathAsArray[pathAsArray.Length - 2] + "/" + pathAsArray[pathAsArray.Length-1] +")";
+               ((Button)sender).Content = "Choose (" + pathAsArray[pathAsArray.Length - 2] + "/" + pathAsArray[pathAsArray.Length-1] +")";
             }
 
-            project = new Project(projectName, projectLocation);
+            Project project = new Project(projectName, projectLocation);
         }
 
         private void ProjectNameBoxTextChange(object sender, TextChangedEventArgs e)
         {
-            projectName = (sender as TextBox).Text;
+            projectName = ((TextBox)sender).Text;
         }
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
