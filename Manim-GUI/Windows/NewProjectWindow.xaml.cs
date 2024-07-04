@@ -47,7 +47,7 @@ namespace Manim_GUI.Windows
 
         private void BackButtonClick(object sender, RoutedEventArgs e)
         {
-            Hide();
+            Close();
             WindowController.Find("StartupWindow1").Show();
         }
 

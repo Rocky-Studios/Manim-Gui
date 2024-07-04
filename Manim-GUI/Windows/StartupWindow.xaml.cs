@@ -49,10 +49,8 @@ namespace Manim_GUI
         private void NewProjectButtonClick(object sender, RoutedEventArgs e)
         {
             var window = new NewProjectWindow();
-
-            window.Owner = this;
             window.Show();
-            this.Hide();
+            Close();
         }
     }
 }
