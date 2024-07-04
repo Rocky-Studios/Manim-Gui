@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using System;
+using System.Diagnostics;
+using System.IO;
+using System.Windows;
 using System.Windows.Controls;
 
 namespace Manim_GUI.Windows
@@ -53,7 +56,9 @@ namespace Manim_GUI.Windows
 
         private void CreateButtonClick(object sender, RoutedEventArgs e)
         {
-            ManimGUI.New(project);
+            //ManimGUI.New(project);
+
+            
         }
     }
 }
