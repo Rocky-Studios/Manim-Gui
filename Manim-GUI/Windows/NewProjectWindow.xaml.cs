@@ -13,6 +13,7 @@ namespace Manim_GUI.Windows
         public NewProjectWindow()
         {
             InitializeComponent();
+            WindowController.windows.Add(this);
         }
 
         private void ProjectLocationButtonClick(object sender, RoutedEventArgs e)
@@ -35,11 +36,18 @@ namespace Manim_GUI.Windows
                 (sender as Button).Content = "Choose (" + pathAsArray[pathAsArray.Length - 2] + "/" + pathAsArray[pathAsArray.Length-1] +")";
             }
 
+            Project project = new Project(projectName, projectLocation);
         }
 
         private void ProjectNameBoxTextChange(object sender, TextChangedEventArgs e)
         {
             projectName = (sender as TextBox).Text;
+        }
+
+        private void BackButtonClick(object sender, RoutedEventArgs e)
+        {
+            Hide();
+            WindowController.Find("StartupWindow1").Show();
         }
     }
 }

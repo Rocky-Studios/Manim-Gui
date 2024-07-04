@@ -19,11 +19,12 @@ namespace Manim_GUI
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class StartupWindow : Window
     {
-        public MainWindow()
+        public StartupWindow()
         {
             InitializeComponent();
+            WindowController.windows.Add(this);
         }
 
         private void OpenProjectButtonClick(object sender, RoutedEventArgs e)
